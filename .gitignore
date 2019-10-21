@@ -1,0 +1,5 @@
+# exclude directories
+/node_modules
+
+# exclude files
+TUTORIALS.md
