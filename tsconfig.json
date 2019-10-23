@@ -3,7 +3,8 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "sourceMap": true,
-    "module": "es6",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
@@ -11,5 +12,6 @@
     "preserveConstEnums": true,
     "removeComments": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }
