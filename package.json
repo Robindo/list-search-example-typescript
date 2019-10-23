@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "concurrently \"webpack-dev-server --mode development --open --hot\" \"json-server db/db.json --port 8081\"",
+    "cypress": "cypress open",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "concurrently": "^5.0.0",
     "css-loader": "^3.2.0",
+    "cypress": "^3.4.1",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
