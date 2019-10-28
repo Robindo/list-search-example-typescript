@@ -1,15 +1,12 @@
 import * as React from 'react';
+import ExampleFormFields from '../components/ExampleForm/ExampleFormFields';
+import ExampleResults from '../components/ExampleResults/ExampleResults';
 
-interface ExampleProps {
-  test: number;
-}
-
-class Example extends React.Component<ExampleProps> {
-  constructor(props: ExampleProps) {
-    super(props);
-  }
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  render = () => <div> Example component {this.props.test}</div>;
-}
+const Example: React.FunctionComponent<{}> = () => (
+  <React.Fragment>
+    <ExampleFormFields />
+    <ExampleResults />
+  </React.Fragment>
+);
 
 export default Example;

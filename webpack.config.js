@@ -5,7 +5,11 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/' //  Prevent page error on page refresh
+  },
+  devServer: {
+    historyApiFallback: true, //  Prevent page error on page refresh
   },
   devtool: 'source-map',
   resolve: {
@@ -27,5 +31,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html'
     })
-  ]
+  ],
 };
