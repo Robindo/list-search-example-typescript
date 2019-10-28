@@ -9,7 +9,7 @@ module.exports = {
     publicPath: '/' //  Prevent page error on page refresh
   },
   devServer: {
-    historyApiFallback: true, //  Prevent page error on page refresh
+    historyApiFallback: true //  Prevent page error on page refresh
   },
   devtool: 'source-map',
   resolve: {
@@ -31,5 +31,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html'
     })
-  ],
+  ]
 };

@@ -7,6 +7,9 @@ module.exports = {
       "prettier/@typescript-eslint",
       "plugin:prettier/recommended"
     ],
+    "env": {
+      "browser": true // fixes error 'document' is not defined  no-undef. (in index.tsx)
+    },
     plugins: ["react", "@typescript-eslint", "prettier"],
     rules: {
       // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs

@@ -5,6 +5,7 @@ import { ThunkDispatch } from 'redux-thunk';
 
 import { getAllDetails } from '../../actions/getActions';
 import { AppActions } from '../../types/actions';
+import { Form, Header, Fields, Input, Button } from './ExampleFormStyle';
 
 interface ExampleFormFieldsProps {
   onChange?: React.FormEventHandler<HTMLInputElement>;
@@ -39,25 +40,26 @@ class ExampleFormFields extends React.Component<Props, ExampleFormFieldsState> {
   render(): {} {
     return (
       <React.Fragment>
-        <h1>Form</h1>
-        <form>
-          <input
-            type="text"
-            name="search"
-            className="search-input"
-            autoFocus={true}
-            onChange={this.onChange}
-            // onKeyUp={this.onKeyUp}
-          />
-          <button
-            type="button"
-            className="button-submit"
-            onClick={this.onClick}
-          >
-            Zoeken
-          </button>
-          <div>Zoek naar: {this.state.searchValue}</div>
-        </form>
+        <Form>
+          <Header>Which music genre are you searching for?</Header>
+          <Fields>
+            <Input
+              type="text"
+              name="search"
+              className="search-input"
+              autoFocus={true}
+              onChange={this.onChange}
+              // onKeyUp={this.onKeyUp}
+            />
+            <Button
+              type="button"
+              className="button-submit"
+              onClick={this.onClick}
+            >
+              Search
+            </Button>
+          </Fields>
+        </Form>
       </React.Fragment>
     );
   }

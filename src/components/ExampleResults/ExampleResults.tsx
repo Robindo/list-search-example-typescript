@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Details } from '../../types/Details';
 import { AppState } from '../../store/configureStore';
 import ExampleResult from './ExampleResult';
+import { NoResultsWrapper, NoResults } from './ExampleResultsStyle';
 
 interface ExampleResultsProps {
   details: Details[];
@@ -15,7 +16,11 @@ class ExampleResults extends React.Component<ExampleResultsProps> {
 
     return (
       <React.Fragment>
-        {details.length === 0 && 'No Results'}
+        <NoResultsWrapper>
+          <NoResults>
+            {details.length === 0 && 'No Results available'}
+          </NoResults>
+        </NoResultsWrapper>
         {...details.map(item => <ExampleResult key={item.id} {...item} />)}
       </React.Fragment>
     );
