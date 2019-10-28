@@ -1,17 +1,24 @@
 {
-    "defaultSeverity": "error",
-    "extends": ["tslint-react"],
-    "jsRules": {},
-    "rules": {
-        "member-access": false,
-        "ordered-imports": false,
-        "quotemark": false,
-        "no-console": false,
-        "semicolon": false,
-        "jsx-no-lambda": false
-    },
-    "rulesDirectory": [],
-    "linterOptions": {
-        "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
-    }
+  "extends": ["tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  },
+  "defaultSeverity": "warning",
+  "rules": {
+    "jsx-no-lambda": false
+    // "curly": true
+    // "member-access": false,
+    // "ordered-imports": false,
+    // "quotemark": false,
+    // "no-console": false,
+    // "semicolon": false,
+  },
+  "jsRules": {
+    "curly": true
+  },
+  "rulesDirectory": []
 }
